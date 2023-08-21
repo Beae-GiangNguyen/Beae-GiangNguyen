@@ -14,7 +14,7 @@
 Khi mọi người đã code xong chức năng hoặc bug thì cần commit code lên
 **Note:** Commit phải theo cấu trúc bên jira(tiền tố, mục đích của commit)
 - Add tất cả các file đã sửa vào stage:\
-`` git add ``
+`` git add . ``
 - Add một số file nhất định vào stage:\
 `` git add <tên file> ``
 - Commit code: (sẽ theo format trên jira)\
@@ -45,7 +45,8 @@ Commit sẽ được đẩy lên trên commit của người khác trong log\
 Sau đó push code lên 
 ## Trường hợp mà branch chính (dev) đã có người khác push thêm code vào
 `` git pull --rebase origin dev ``\
-Lệnh trên sẽ giúp bạn lấy những code mới nhất từ branch dev về, sau đó "viết lại" branch feature của bạn để đẩy commit của bạn lên trên cùng. Cuối cùng là push force lên feature branch. Push force sẽ apply toàn bộ log ở local của bạn lên branch ở repo, bất chấp log 2 nơi khác nhau:\
+Lệnh trên sẽ giúp bạn lấy những code mới nhất từ branch dev về, sau đó "viết lại" branch feature của bạn để đẩy commit của bạn lên trên cùng.\
+Cuối cùng là push force lên feature branch. Push force sẽ apply toàn bộ log ở local của bạn lên branch ở repo, bất chấp log 2 nơi khác nhau:\
 `` git push -f origin <tên branch> ``
 ## Gộp commit
 **Note:** Trong quá trình làm có thể sẽ tạo nhiều commit trên một branch, khi muốn gộp các commit thành 1 commit duy nhất:
@@ -64,6 +65,10 @@ Force push code sau khi đã gộp commit
 `` git reset --mixed commit_id ``
 - Reset commit và xóa toàn bộ code đã làm:\
 `` git reset --hard commit_id ``
+- Liệt kê các commit để lấy ra commit_id\
+`` git log --oneline ``\
+![Screenshot 2023-08-21 at 15 31 42](https://github.com/Beae-GiangNguyen/Beae-GiangNguyen/assets/139731665/8fd76e63-b7c2-4d4e-bbad-6641049060dc)
+
 ### Stash
 **Note:** Có thể dùng cái này như một cứu cánh để lưu tạm code trước khi thực hiện các lệnh rebase hay checkout sang branch khác mà bị conflict
 - Lưu code vào stash: \
