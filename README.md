@@ -81,3 +81,5 @@ Force push code sau khi đã gộp commit
 `` git stash list ``\
 ![Screenshot 2023-08-21 at 15 18 37](https://github.com/Beae-GiangNguyen/Beae-GiangNguyen/assets/139731665/0cf5557c-45a2-46a7-a940-ac1260084a82)
 
+[url](https://www.google.com.vn/){:target="_blank"}
+
